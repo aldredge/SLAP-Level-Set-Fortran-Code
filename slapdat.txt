@@ -1,0 +1,28 @@
+0.5d0	  ! cfl:       CFL number
+1.0d0	  ! sl:        normal propagation speed
+2000 	  ! nplot:     number of data output events
+0         ! ireplt:    if 1, replot to gdat.txt, otherwise gdat1.txt, gdat2.txt, ...
+1	  ! limit:     1 => Shape-Preservation Algorithm (SPA) used (should be zero!)
+3	  ! itc        number of iterations for determining departure point
+1	  ! kr:        ratio (kx/ky=kx/kz) of transverse to longitudinal length scales
+1	  ! iso:       1 => isotropic advection field when kr = 1
+0	  ! iquad      0 => comp on the full-period domain; otherwise on a quadrant of the full domain 
+0.0d0	  ! pltstrt    beginning of time2pi range for plotting (requires ireplt=0)
+0.0d0	  ! pltstop    end of time2pi range for plotting (requires ireplt=0)
+1         ! irein      number of time steps between reinitialization application 
+0         ! nordg      order of spatial differentiation for gradient magnitude (unstable for nordg=3)
+6         ! nreinit    (1,2,..) => number of reinitialization iterations
+1         ! iscf       1 => reinitialize with 'sub-cell fix'
+0	  ! irk	       0 (1) => 1st order (RK) reinitialization
+1	  ! igrd       0 (1) => ENO (WENO) gradients
+1.0d0     ! wind       mean velocity field in x direction (in units of Sl-above)
+0         ! ifreq      0 (1 or ~0)  => (no) coord trans to eliminate time dependence of vel
+0.4d0	  ! cfl_re     cfl for reinitialization
+256	  ! nt0	       grid points per vel-field length scale [-0.5,0.5] (must be even)
+3         ! itimelev   number of time levels used for time averaging (should be 2 or 3)
+3         ! nmodes     number of wavenumber modes in velocity field
+0	  ! norda      order of spatial differentiation for gradient in advection scheme: 4 or 5 => WENO; otherwise 4rd-order upwind (faster); value of 0 recommended
+0         ! lrunge     0 (1) => vel-ave collocation (runge-kutta integration) to get 
+	  ! 	       characteristic departure point; the code is slower and no more accurate 
+	  !	       with lrunge=1 than with lrunge=0 (disappointing); static departure-point
+	  !	       calculation (only at t=0) not yet implemented for lrunge=1
