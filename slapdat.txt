@@ -18,7 +18,7 @@
 1.0d0     ! wind       mean velocity field in x direction (in units of Sl-above)
 0         ! ifreq      0 (1 or ~0)  => (no) coord trans to eliminate time dependence of vel
 0.4d0	  ! cfl_re     cfl for reinitialization
-256	  ! nt0	       grid points per vel-field length scale [-0.5,0.5] (must be even)
+64	  ! nt0	       grid points per vel-field length scale [-0.5,0.5] (must be even)
 3         ! itimelev   number of time levels used for time averaging (should be 2 or 3)
 3         ! nmodes     number of wavenumber modes in velocity field
 0	  ! norda      order of spatial differentiation for gradient in advection scheme: 4 or 5 => WENO; otherwise 4rd-order upwind (faster); value of 0 recommended
